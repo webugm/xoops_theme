@@ -1,8 +1,8 @@
-<{if $xoBlocks.canvas_left && $xoBlocks.canvas_right}>
+<{if $xoops_showlblock && $xoops_showrblock}>
   <div class="col-sm-6 col-md-6">
-<{elseif $xoBlocks.canvas_left}>
+<{elseif $xoops_showlblock}>
   <div class="col-sm-9 col-md-9">
-<{elseif $xoBlocks.canvas_right}>
+<{elseif $xoops_showrblock}>
   <div class="col-sm-9 col-md-9">
 <{else}>
   <div class="col-sm-12 col-md-12">

@@ -1,12 +1,92 @@
 @import url("xoops_style.css");
-
-td.even label{
-  display:inline;
+/* jGrowl redirection */
+div.jGrowl {
+    padding: 1em;
+    z-index: 9999;
 }
 
-td.even input[type="text"], td.even textarea{
-  width:90%;
+/* JGrowl Box position in the page */
+body > div.jGrowl {
+    position: fixed;
 }
+
+body > div.jGrowl.top-right {
+    right: 25%;
+    left: 25%;
+    top: 2px;
+}
+
+body > div.jGrowl.bottom-left {
+    left: 0;
+    bottom: 0;
+}
+
+body > div.jGrowl.bottom-right {
+    right: 0;
+    bottom: 0;
+}
+
+body > div.jGrowl.center {
+    top: 0;
+    width: 50%;
+    left: 25%;
+}
+
+body > div.jGrowl.top-left {
+    left: 0;
+    top: 0;
+}
+
+/* jGrowl Box style */
+div.center div.jGrowl-notification, div.center div.jGrowl-closer {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.jGrowl div.jGrowl-notification, div.jGrowl div.jGrowl-closer {
+    background-color: #EBFBFE;
+    color: #000080;
+    width: 100%;
+    padding: .5em;
+    margin-top: .5em;
+    margin-bottom: .5em;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 1.2em;
+    text-align: center;
+    border: 1px solid #6699FF;
+    display: none;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+div.jGrowl div.jGrowl-notification {
+    min-height: 40px;
+}
+
+div.jGrowl div.jGrowl-notification div.jGrowl-header {
+    font-weight: bold;
+    font-size: 10px;
+}
+
+/* jGrowl Close button */
+div.jGrowl div.jGrowl-notification button.jGrowl-close {
+    float: right;
+    font-weight: bold;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+div.jGrowl div.jGrowl-closer {
+    height: 15px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: bold;
+    text-align: center;
+}
+
 
 /* ===== 主選單 ===== */
 #mainmenu a {
@@ -49,90 +129,3 @@ td.even input[type="text"], td.even textarea{
 }
 #usermenu a.highlight {
 }
-/* ===== 項目符號 ===== */
-ul {
-  margin: 2px;
-  padding: 2px;
-  list-style: disc outside;
-  text-align: left;
-}
-ol {
-  margin: 2px;
-  padding: 2px;
-  list-style: decimal outside;
-  text-align: left;
-}
-li {
-  margin-left: 2px;
-  color: #233D5E;
-}
-/* ===== 標題預設大小 ===== */
-h1 {
-  font-size: 1.4em;
-}
-h2 {
-  font-size: 1.3em;
-}
-h3 {
-  font-size: 1.2em;
-}
-h4 {
-  font-size: 1.1em;
-}
-h5 {
-  font-size: 1em;
-}
-/* ===== 表格框線配色 ===== */
-.outer {
-  border: 1px solid silver;
-  border-collapse: collapse;
-}
-
-
-table.outer th{
-  background-color: #5e5e5e;
-  color:white;
-}
-
-.even {
-  background-color: #F5F5F5;
-  padding: 5px;
-}
-
-.odd {
-  background-color: rgb(255,255,255);
-  padding: 5px;
-}
-tr.even td {
-  background-color: #F5F5F5;
-  padding: 5px;
-}
-tr.odd td {
-  background-color: rgb(255,255,255);
-  padding: 5px;
-}
-
-td.head{
-  background-color: #e5e5e5;
-}
-
-.profile-list-activity{
-  width:100%;
-}
-
-div.comText {
-  text-wrap: normal;
-  table-layout: fixed;
-  word-wrap: break-word;
-  width: 545px;
-  min-height:250px;
-  overflow: hidden;
-  line-height:180%;
-}
-
-div.comText img {
-  max-width: 500px;
-  width: expression(this.width > 500 ? "500px": this.width);
-  overflow: hidden;
-}
-
